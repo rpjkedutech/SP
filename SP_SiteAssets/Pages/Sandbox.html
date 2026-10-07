@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Agenda & Learning Path</title>
+    <link rel="stylesheet" href="../CSS/SP_Sandbox.css">    
+</head>
+
+<body>
+
+    <header class="Navbar">
+        <div class="gradient-effect">RPJK Edutech - Software</div>
+    </header>
+
+    <div id="main-content-wrapper">
+        <!-- Engaging Loading Splash Screen -->
+        <div id="splash-screen">
+            <div class="splash-content">
+                <div class="splash-logo">RPJK</div>
+                <div class="splash-subtitle">Activity-Hands On</div>
+                <div class="loader-bar">
+                    <div class="loader-progress"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main App Interface -->
+        <div class="app-container" id="app-container">
+            <!-- Header -->
+            <div class="app-header">
+                <div>
+                    <span class="concept-badge" id="category-badge">HTML Basics</span>
+                    <h1 class="concept-title" id="concept-title">Loading Concept...</h1>
+                </div>
+                <div class="toolbar-btns">
+                    <button class="icon-btn" id="instruction-btn" title="View Instructions">
+                        <span>💡</span> Instructions
+                    </button>
+                    <button class="icon-btn" id="reference-btn" title="Reference Link">
+                        <span>🔗</span> Reference
+                    </button>
+                    <button class="icon-btn" id="reset-btn" title="Reset Challenge">
+                        <span>🔄</span> Reset
+                    </button>
+                </div>
+            </div>
+
+            <!-- Body Activity Area -->
+            <div class="app-body">
+                <p class="instruction-hint" id="instruction-hint-text">
+                    Rearrange the following code blocks into their proper logical structure. Use the arrows or drag
+                    items.
+                </p>
+                <div class="code-workspace" id="code-workspace">
+                    <!-- Code lines dynamically injected via JavaScript -->
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="app-footer">
+                <span id="progress-indicator"
+                    style="font-size: 0.9rem; color: var(--text-muted); font-weight: 500;">Challenge 1 of 3</span>
+                <div class="nav-group">
+                    <button class="secondary-btn" id="prev-btn" style="display: none;">Previous</button>
+                    <button class="primary-btn" id="check-btn">Check Answer</button>
+                    <button class="secondary-btn" id="next-btn">Next</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Instruction Modal -->
+        <div class="modal-overlay" id="instruction-modal">
+            <div class="modal-card">
+                <h3 class="modal-title">Activity Instructions</h3>
+                <div class="modal-body" id="modal-instruction-content">
+                    <!-- Instructions in bullet points injected dynamically -->
+                </div>
+                <div class="modal-actions">
+                    <button class="modal-btn primary-btn" id="close-instruction-btn" style="flex: 1;">Got It!</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Custom Exit / Reset Confirmation Modal -->
+        <div class="modal-overlay" id="confirm-modal">
+            <div class="modal-card">
+                <h3 class="modal-title">Reset Progress?</h3>
+                <div class="modal-body"
+                    style="text-align: center; background: none; border: none; padding: 0; margin-bottom: 1.5rem;">
+                    Are you sure you want to reset your current arrangement? Any changes made will be lost.
+                </div>
+                <div class="modal-actions">
+                    <button class="modal-btn btn-cancel" id="cancel-confirm-btn">Cancel</button>
+                    <button class="modal-btn btn-confirm" id="ok-confirm-btn">Yes, Reset</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Toast Notification Element -->
+        <div id="toast">Link not configured.</div>
+
+        <footer class="site-footer">
+            &copy; 2026 RPJK Edutech. All rights reserved.
+        </footer>
+    </div>
+   
+    <script src="../JS/Sandbox.min.js"></script>
+</body>
+
+</html>

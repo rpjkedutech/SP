@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arithmetic Progression Mastery - Quantitative Aptitude</title>
+    <link rel="stylesheet" href="../CSS/Aptitude.Sandbox.css">
+</head>
+<body>
+
+    <div id="main-content-wrapper">
+
+        <!-- Fixed Header -->
+        <header class="Navbar">
+            <div class="gradient-effect">RPJK Edutech - Aptitude</div>
+            <div class="nav-right-cluster">
+                <div class="score-badge">⭐ Score: <span id="score-val">0</span>/<span id="total-val">5</span></div>
+                <div id="status-container" class="status-badge">
+                    <div class="status-pulse"></div>
+                    <span id="status-text">Interactive Ready</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Container -->
+        <main class="main-container">
+            <div class="dashboard-stack">
+                
+                <!-- ACCORDION 1: Instruction Section (Manually Collapsible) -->
+                <section class="accordion-panel" id="panel-instruction">
+                    <div class="accordion-header" onclick="toggleAccordion('panel-instruction')">
+                        <span>1. Strategy & Formula Concept</span>
+                        <span id="inst-arrow">▼</span>
+                    </div>
+                    <div class="accordion-body">
+                        <div class="panel-text" id="instruction-text-target">
+                            Loading instructions...
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ACCORDION 2: Question Section (Active by Default) -->
+                <section class="accordion-panel active" id="panel-question">
+                    <div class="accordion-header" onclick="toggleAccordion('panel-question')">
+                        <span id="question-counter-label">2. Question 1 of 5</span>
+                        <div class="timer-badge">
+                            ⏱️ <span id="timer-display">15s Remaining</span>
+                        </div>
+                    </div>
+                    <div class="accordion-body" style="padding: 20px;">
+                        <div class="timer-container">
+                            <div class="timer-bar" id="timer-bar"></div>
+                        </div>
+                        <div class="panel-text" id="q-prompt" style="margin-bottom: 16px;">Loading question...</div>
+                        <div class="options-container" id="options-grid">
+                            <!-- Options populate dynamically -->
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ACCORDION 3: Explanation & Whiteboard Section (Auto-visible on Answer) -->
+                <section class="accordion-panel" id="panel-explanation">
+                    <div class="accordion-header" onclick="toggleAccordion('panel-explanation')">
+                        <span>3. Step-by-Step Whiteboard Solution</span>
+                        <span id="exp-arrow">▼</span>
+                    </div>
+                    <div class="accordion-body">
+                        <div id="whiteboard-container">
+                            <!-- Dynamic step cards load here -->
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </main>
+
+        <!-- Static Footer -->
+        <footer class="site-footer">
+            <div>&copy; 2026 RPJK Edutech. All rights reserved.</div>
+            <div class="nav-controls">
+                <button class="control-btn secondary" onclick="restartLesson()">🔄 Restart</button>
+                <button class="control-btn" onclick="nextQuestion()">Next ➡</button>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../JS/Aptitude.Sandbox.min.js"></script>
+</body>
+</html>
